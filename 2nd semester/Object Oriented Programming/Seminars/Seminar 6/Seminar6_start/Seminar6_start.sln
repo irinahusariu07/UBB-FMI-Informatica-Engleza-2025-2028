@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Seminar6_start", "Seminar6_start\Seminar6_start.vcxproj", "{214F3F3C-A769-46B0-B6BD-ACDA4F48CA65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{214F3F3C-A769-46B0-B6BD-ACDA4F48CA65}.Debug|x64.ActiveCfg = Debug|x64
+		{214F3F3C-A769-46B0-B6BD-ACDA4F48CA65}.Debug|x64.Build.0 = Debug|x64
+		{214F3F3C-A769-46B0-B6BD-ACDA4F48CA65}.Release|x64.ActiveCfg = Release|x64
+		{214F3F3C-A769-46B0-B6BD-ACDA4F48CA65}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B04192F3-F2B2-4B68-8415-1C626A51BF26}
+	EndGlobalSection
+EndGlobal

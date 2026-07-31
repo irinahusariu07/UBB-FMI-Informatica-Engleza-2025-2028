@@ -1,0 +1,4 @@
+id: abc usage class: a++ consume: 60.000000 has freezer: no
+
+id: pula usage class: a++ consume: 80.000000 has freezer: yes
+

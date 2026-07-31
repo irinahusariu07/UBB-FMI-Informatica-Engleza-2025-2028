@@ -1,0 +1,11 @@
+alehandro|dino|0|
+astronaut|somn|0|dsd;platypus
+bacterie1|ceaun|2|boala rea;bisnita;rau
+bacterie2|ala|33|piscoteala
+bacterie3|bala|22|misandrie
+bacterie4|somn|9|placere maxima;rau
+bacterie5|somn|22|simbolism;maniheism;ceahlau
+bacterie6|ala|0|mam;dam
+bacterie7|dino|0|
+bacterie8|ceaun|0|must;do
+elefant|somn|0|dsd

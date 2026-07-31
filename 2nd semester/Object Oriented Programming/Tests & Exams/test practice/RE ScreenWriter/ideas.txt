@@ -1,0 +1,6 @@
+lupu merge|proposed|dana|2
+si viseaza|accepted|ioan|1
+ursul doarme|accepted|ioan|1
+miei pl|proposed|andrei|3
+maus|proposed|dana|2
+miei pl|accepted|dana|2

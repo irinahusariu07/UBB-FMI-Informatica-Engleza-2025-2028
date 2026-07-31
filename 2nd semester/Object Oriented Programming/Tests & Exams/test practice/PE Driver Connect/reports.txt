@@ -1,0 +1,7 @@
+accident|Marco|2|2|true
+police|Polo|3|5|false
+police|Abi|2|2|true
+accident|Polo|5|5|false
+jks|Abi|2|2|true
+jks|Abi|2|2|true
+jks|Polo|2|0|false

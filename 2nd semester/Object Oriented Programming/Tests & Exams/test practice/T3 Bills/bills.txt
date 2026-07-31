@@ -1,0 +1,5 @@
+digi sport|0APLM|75.00|false
+e-on|EED35|67.50|true
+orange|MKKD77|200.00|false
+vodafone|V73GH|20.00|true
+tcomm|MUIUS|100.00|true

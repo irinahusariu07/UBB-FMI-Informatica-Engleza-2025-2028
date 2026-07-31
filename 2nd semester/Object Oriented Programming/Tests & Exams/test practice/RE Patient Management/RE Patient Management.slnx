@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="doctors.txt" />
+  </Folder>
+  <Project Path="RE Patient Management.vcxproj" Id="159b858d-1f1a-4751-94af-8ee73bce9b13" />
+</Solution>

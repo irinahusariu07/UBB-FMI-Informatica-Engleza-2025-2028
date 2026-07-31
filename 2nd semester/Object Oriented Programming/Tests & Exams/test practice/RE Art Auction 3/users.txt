@@ -1,0 +1,4 @@
+michael|2|collector
+jonah|1|administrator
+rianna|3|collector
+diana|6|administrator

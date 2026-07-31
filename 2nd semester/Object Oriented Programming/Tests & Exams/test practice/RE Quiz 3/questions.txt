@@ -1,0 +1,8 @@
+1|cine stie sa conduce?|io|2
+4|1+1?|2|5
+2|cum ma cheama?|irina|2
+3|ce culoare are iarba?|verde|10
+7|in ce luna suntem?|iulie|4
+6|cat e 65+2?|67|5
+5|cat e radical din 9?|3|10
+8|ce inseamna fun?|distractie|2

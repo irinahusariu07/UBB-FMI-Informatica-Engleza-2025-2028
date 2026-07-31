@@ -1,0 +1,12 @@
+accident cu bicicleta|dorin|2|2|true
+police|petra|4|1|true
+accident cu masina|petra|9|7|true
+radar|andra|47|25|false
+blocaj|andra|2|1|true
+fun police|petra|5|3|true
+paranghelie|dorin|2|2|true
+idk|dorin|3|3|true
+burta|dorin|6|7|true
+ggk|dorin|1|1|true
+pisoi|petra|2|2|true
+aladin|petra|1|1|true

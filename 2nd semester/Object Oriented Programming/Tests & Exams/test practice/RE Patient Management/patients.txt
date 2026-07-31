@@ -1,0 +1,10 @@
+ana|undiagnosed|orl||2026-07-07
+biana|cancer|oncology|bob|2026-08-01
+bella|undiagnosed||paul|2026-09-05
+carl|undiagnosed|||2026-07-10
+diana|broken bone|cardio||2026-07-20
+maura|sore throat|orl||2026-07-10
+dominik|otita|orl|paul|2026-07-10
+john|infection|orl||2026-08-08
+bibi|tonsiliotis|orl|mada|2027-01-02
+antonia|fungus|orl||2026-08-09

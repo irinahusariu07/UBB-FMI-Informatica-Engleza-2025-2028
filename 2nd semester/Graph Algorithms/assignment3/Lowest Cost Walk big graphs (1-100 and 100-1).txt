@@ -1,0 +1,15 @@
+1K graph: 
+1 -> 100 : 
+		lowest cost walk:  [100, 643, 408, 402, 698, 1]
+		cost:  9
+100 -> 1 : 
+		lowest cost walk:  [1, 825, 980, 156, 730, 39, 100]
+		cost:  19
+
+10K graph:
+1 -> 100 : Negative cost cycle reachable from start vertex
+100 -> 1 : Negative cost cycle reachable from start vertex
+
+100K graph:
+1 -> 100 : Negative cost cycle reachable from start vertex 
+100 -> 1 : Negative cost cycle reachable from start vertex

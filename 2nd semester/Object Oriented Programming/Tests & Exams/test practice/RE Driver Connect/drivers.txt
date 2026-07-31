@@ -1,0 +1,3 @@
+dorin|baby|2|5|9
+andra|knight|4|7|25
+petra|grownup|3|3|12

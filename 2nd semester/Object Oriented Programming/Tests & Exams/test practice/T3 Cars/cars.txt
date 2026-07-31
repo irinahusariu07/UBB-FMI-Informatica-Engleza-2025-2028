@@ -1,0 +1,5 @@
+fiat|bravo|2007|red
+fiat|idea|2003|black
+audi|a5|2007|blue
+mercedes-benz|suv|2013|blue
+ford|fiesta|2015|green

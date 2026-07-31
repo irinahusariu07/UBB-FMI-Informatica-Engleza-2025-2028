@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="FixedCapbyMap.vcxproj" Id="9c3045d5-ae89-4733-bb25-dc9125ceee3d" />
+</Solution>

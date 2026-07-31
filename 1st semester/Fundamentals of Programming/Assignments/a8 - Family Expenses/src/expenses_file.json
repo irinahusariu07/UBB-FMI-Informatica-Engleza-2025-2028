@@ -1,0 +1,107 @@
+[
+    {
+        "day": 14,
+        "amount": 371,
+        "category": "clothing"
+    },
+    {
+        "day": 27,
+        "amount": 203,
+        "category": "transport"
+    },
+    {
+        "day": 6,
+        "amount": 81,
+        "category": "others"
+    },
+    {
+        "day": 21,
+        "amount": 315,
+        "category": "housekeeping"
+    },
+    {
+        "day": 25,
+        "amount": 200,
+        "category": "clothing"
+    },
+    {
+        "day": 25,
+        "amount": 271,
+        "category": "housekeeping"
+    },
+    {
+        "day": 20,
+        "amount": 333,
+        "category": "housekeeping"
+    },
+    {
+        "day": 29,
+        "amount": 18,
+        "category": "transport"
+    },
+    {
+        "day": 30,
+        "amount": 9,
+        "category": "others"
+    },
+    {
+        "day": 15,
+        "amount": 455,
+        "category": "transport"
+    },
+    {
+        "day": 30,
+        "amount": 243,
+        "category": "housekeeping"
+    },
+    {
+        "day": 2,
+        "amount": 70,
+        "category": "clothing"
+    },
+    {
+        "day": 8,
+        "amount": 89,
+        "category": "housekeeping"
+    },
+    {
+        "day": 3,
+        "amount": 107,
+        "category": "clothing"
+    },
+    {
+        "day": 22,
+        "amount": 419,
+        "category": "food"
+    },
+    {
+        "day": 17,
+        "amount": 340,
+        "category": "internet"
+    },
+    {
+        "day": 29,
+        "amount": 212,
+        "category": "housekeeping"
+    },
+    {
+        "day": 26,
+        "amount": 23,
+        "category": "housekeeping"
+    },
+    {
+        "day": 19,
+        "amount": 220,
+        "category": "housekeeping"
+    },
+    {
+        "day": 16,
+        "amount": 407,
+        "category": "internet"
+    },
+    {
+        "day": 28,
+        "amount": 250,
+        "category": "food"
+    }
+]

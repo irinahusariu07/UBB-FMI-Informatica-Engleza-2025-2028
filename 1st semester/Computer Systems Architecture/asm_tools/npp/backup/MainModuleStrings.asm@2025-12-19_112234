@@ -1,0 +1,31 @@
+bits 32
+global start 
+
+extern exit 
+extern concatenate 
+import exit msvcrt.dll
+segment data use32 class = data 
+    s1 db 1, 2, 3, 4, 5, 6
+    len1 equ $-s1
+    s2 db 20, 30, 45, 72, 85
+    len equ $-s2
+    ; compute s3 y concatenating odd elements from s1 and s2 
+    s3 times (len1 + len2) db 0 
+    len3 db 0 
+    
+segment code use32 class = code
+
+        
+      start:
+        ; main 
+        ; concatenate(s1, len1, s2, len2, s3)
+        push dword s3 
+        push dword len2 ; for constants we dont need [ ] for value 
+        push dword s2 
+        push dword len1 
+        push dword 21
+        call concatenate 
+        add esp, 4 * 5 ; free the stack in main 
+    
+        mov [len3], AL ;AL - byte of EAX because we expect it to be a byte 
+        

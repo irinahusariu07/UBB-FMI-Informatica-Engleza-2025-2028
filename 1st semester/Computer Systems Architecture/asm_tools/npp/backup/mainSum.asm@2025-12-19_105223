@@ -1,0 +1,64 @@
+bits 32 
+global start
+
+extern exit, scanf, printf
+extern sum
+import exit msvcrt.dll
+import scanf msvcrt.dll
+import printf msvcrt.dll
+import sum msvcrt.dll
+
+segment data use32 class=data
+    a dd 0
+    b dd 0
+    c dd 0
+    format_print db "give a number = ", 0
+    format db "%d", 0
+    format_sum db "%d + %d + %d  = %d", 0
+
+
+segment code use32 class=code
+
+    start:
+        push dword format_print
+        call[printf]
+        add esp, 4
+
+        push dword a
+        push dword format
+        call[scanf]
+        add esp, 42
+
+        push dword format_print
+        call[printf]
+        add esp, 4
+
+        push dword b
+        push dword format
+        call[scanf]
+        add esp, 42
+
+        push dword format_print
+        call[printf]
+        add esp, 4
+
+        push dword c
+        push dword format
+        call[scanf]
+        add esp, 42
+
+        push dword [c]
+        push dword [b]
+        push dword [a]
+        call sum
+
+        push dword eax
+        push dword [c]
+        push dword [b]
+        push dword [a]
+        push dword format_sum
+        call[printf]
+        add esp, 4*5
+
+        push    dword 0
+        call    [exit]

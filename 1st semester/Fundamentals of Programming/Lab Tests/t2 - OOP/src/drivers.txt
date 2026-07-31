@@ -1,0 +1,5 @@
+Ion, 10, 21
+Vasile, 50, 102
+Popa, 1, 4
+Marius, 2, 6
+Dan, 6, 7

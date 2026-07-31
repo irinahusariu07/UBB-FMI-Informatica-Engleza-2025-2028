@@ -1,0 +1,11 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="3">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="660" startPos="162" endPos="162" selMode="0" lang="Assembly" encoding="-1" filename="C:\Users\irina\OneDrive\Desktop\facultate\ASC\asm_c\mainSum.asm" backupFilePath="C:\Users\irina\OneDrive\Desktop\facultate\asm_tools\npp\backup\mainSum.asm@2025-12-19_105223" originalFileLastModifTimestamp="1766133718" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="12583104" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="660" startPos="305" endPos="305" selMode="0" lang="Assembly" encoding="-1" filename="C:\Users\irina\OneDrive\Desktop\facultate\ASC\asm_c\sum.asm" backupFilePath="" originalFileLastModifTimestamp="1766133728" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="150994953" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1752" startPos="366" endPos="366" selMode="0" lang="Assembly" encoding="-1" filename="C:\Users\irina\OneDrive\Desktop\facultate\ASC\asm_c\MainModuleStrings.asm" backupFilePath="C:\Users\irina\OneDrive\Desktop\facultate\asm_tools\npp\backup\MainModuleStrings.asm@2025-12-19_112234" originalFileLastModifTimestamp="1766136098" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="7340078" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="23" xOffset="0" scrollWidth="1752" startPos="1846" endPos="1846" selMode="0" lang="Assembly" encoding="-1" filename="C:\Users\irina\OneDrive\Desktop\facultate\ASC\asm_c\concatenate.asm" backupFilePath="" originalFileLastModifTimestamp="1766136174" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="3014698" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

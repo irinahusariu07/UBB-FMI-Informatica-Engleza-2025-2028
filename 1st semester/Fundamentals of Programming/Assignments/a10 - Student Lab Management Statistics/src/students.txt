@@ -1,0 +1,26 @@
+1,Vanessa Tucker,289
+2,Mrs. Sonya Figueroa,641
+3,Tony Bush,487
+5,Jeremy Clayton Jr.,630
+6,Steven Price,1013
+7,James Jones,336
+8,John Johnson,132
+9,Michael Green,537
+10,Kristy Roberts,214
+11,Mr. Joseph Owens PhD,677
+12,Ryan Price,423
+13,Christopher Mendez,466
+14,Robert Wallace,888
+16,Curtis Reynolds,757
+17,Christopher Graham,845
+18,David Lucas,558
+19,Sean Moore,744
+20,Mrs. Lisa Gomez DDS,832
+21,Alex,1
+22,Matthew Garcia ,912
+23,Paula Diana ,912
+24,Ana,546
+25,Bob Mjhd,345
+26,Ariana ,546
+15,Craig Mendoza,817
+45,AFHdjag,345

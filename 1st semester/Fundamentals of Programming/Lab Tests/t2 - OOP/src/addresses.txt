@@ -1,0 +1,5 @@
+1, Theodor Mihali, 12, 20
+2, Dorobantilor, 5, 10
+3, Kogalnicean, 20, 10
+4, Marasesti, 5, 6
+5, Florilor, 7, 19

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Polar–Cartesian Math Visualizer</title>
+
+<!-- Computer Modern Web Font -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/index.min.css">
+
+<style>
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background: #0f1226;
+    font-family: "Computer Modern Serif", serif;
+    color: #e8f1ff;
+}
+
+/* Layout */
+.canvas-container {
+    flex: 1;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #161a3a, #0f1226);
+}
+
+/* Grid */
+.cartesian line {
+    stroke: rgba(120, 150, 255, 0.15);
+}
+
+.polar circle {
+    stroke: rgba(255, 120, 200, 0.15);
+}
+
+.polar line {
+    stroke: rgba(255, 200, 120, 0.12);
+}
+
+/* Axes */
+.axis-x {
+    stroke: #4cc9f0;
+    stroke-width: 3;
+}
+
+.axis-y {
+    stroke: #f72585;
+    stroke-width: 3;
+}
+
+.axis-label {
+    font-size: 18px;
+    fill: #ffffff;
+}
+
+/* Vector */
+.vector {
+    stroke: #00f5d4;
+    stroke-width: 3;
+}
+
+/* Sector */
+.sector {
+    fill: rgba(255, 221, 89, 0.25);
+    stroke: rgba(255, 221, 89, 0.7);
+    transition: all 0.4s ease;
+}
+
+/* Arc */
+.angle-arc {
+    stroke: #ffd166;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Point */
+.point {
+    fill: #ff9f1c;
+    cursor: grab;
+}
+
+/* Origin */
+.origin {
+    fill: #ffffff;
+}
+
+/* Vector label */
+.vector-label {
+    fill: #00f5d4;
+    font-style: italic;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.vector-label.visible {
+    opacity: 1;
+}
+
+/* Panel */
+.panel {
+    width: 320px;
+    background: #15193a;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.panel h2 {
+    margin-top: 0;
+    color: #ffd166;
+}
+
+.explain {
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #cdd7ff;
+}
+
+/* Sliders */
+input[type=range] {
+    width: 100%;
+    margin: 12px 0;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background: #242a6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3038a8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="canvas-container">
+<svg id="svgCanvas"></svg>
+</div>
+
+<div class="panel">
+<h2>Understanding Polar Coordinates</h2>
+
+<div class="explain">
+The point <b>P</b> is represented in two ways:
+<br><br>
+• Cartesian form: (x, y)  
+<br>
+• Polar form: (r, φ)  
+<br><br>
+Here, r is the distance from the origin O,  
+and φ is the oriented angle from axis Ox.
+</div>
+
+<div><b>Cartesian Coordinates</b></div>
+<div>x = <span id="xVal">0</span></div>
+<div>y = <span id="yVal">0</span></div>
+
+<br>
+
+<div><b>Polar Coordinates</b></div>
+<div>r = <span id="rVal">0</span></div>
+<div>φ = <span id="phiVal">0</span>°</div>
+
+<label>Radius r</label>
+<input type="range" id="rSlider" min="0" max="300">
+
+<label>Angle φ</label>
+<input type="range" id="phiSlider" min="-180" max="180">
+
+<button id="toggleVector">Show / Hide Position Vector Label</button>
+<button id="resetBtn">Reset to (1, 0)</button>
+
+<br><br>
+
+<div><b>How φ is computed</b></div>
+<div id="steps" style="font-size:14px; line-height:1.6;"></div>
+
+</div>
+
+<script>
+const svg = document.getElementById("svgCanvas");
+const width = window.innerWidth - 320;
+const height = window.innerHeight;
+svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+
+const centerX = width / 2;
+const centerY = height / 2;
+const maxRadius = Math.min(width, height) / 2;
+
+/* Groups */
+function group(cls){
+    const g = document.createElementNS(svg.namespaceURI,"g");
+    g.setAttribute("class",cls);
+    svg.appendChild(g);
+    return g;
+}
+const cartesian = group("cartesian");
+const polar = group("polar");
+
+/* Cartesian Grid */
+for(let x=0;x<width;x+=50){
+    let line=document.createElementNS(svg.namespaceURI,"line");
+    line.setAttribute("x1",x);
+    line.setAttribute("y1",0);
+    line.setAttribute("x2",x);
+    line.setAttribute("y2",height);
+    cartesian.appendChild(line);
+}
+for(let y=0;y<height;y+=50){
+    let line=document.createElementNS(svg.namespaceURI,"line");
+    line.setAttribute("x1",0);
+    line.setAttribute("y1",y);
+    line.setAttribute("x2",width);
+    line.setAttribute("y2",y);
+    cartesian.appendChild(line);
+}
+
+/* Polar grid */
+for(let r=50;r<maxRadius;r+=50){
+    let c=document.createElementNS(svg.namespaceURI,"circle");
+    c.setAttribute("cx",centerX);
+    c.setAttribute("cy",centerY);
+    c.setAttribute("r",r);
+    polar.appendChild(c);
+}
+
+/* Axes */
+const axisX=document.createElementNS(svg.namespaceURI,"line");
+axisX.setAttribute("x1",0);
+axisX.setAttribute("y1",centerY);
+axisX.setAttribute("x2",width);
+axisX.setAttribute("y2",centerY);
+axisX.setAttribute("class","axis-x");
+svg.appendChild(axisX);
+
+const axisY=document.createElementNS(svg.namespaceURI,"line");
+axisY.setAttribute("x1",centerX);
+axisY.setAttribute("y1",0);
+axisY.setAttribute("x2",centerX);
+axisY.setAttribute("y2",height);
+axisY.setAttribute("class","axis-y");
+svg.appendChild(axisY);
+
+/* Axis labels */
+function label(text,x,y){
+    const t=document.createElementNS(svg.namespaceURI,"text");
+    t.setAttribute("x",x);
+    t.setAttribute("y",y);
+    t.setAttribute("class","axis-label");
+    t.textContent=text;
+    svg.appendChild(t);
+}
+label("Ox",width-40,centerY-10);
+label("Oy",centerX+10,20);
+
+/* Origin */
+const origin=document.createElementNS(svg.namespaceURI,"circle");
+origin.setAttribute("cx",centerX);
+origin.setAttribute("cy",centerY);
+origin.setAttribute("r",6);
+origin.setAttribute("class","origin");
+svg.appendChild(origin);
+
+/* Sector */
+const sector=document.createElementNS(svg.namespaceURI,"path");
+sector.setAttribute("class","sector");
+svg.appendChild(sector);
+
+/* Vector */
+const vector=document.createElementNS(svg.namespaceURI,"line");
+vector.setAttribute("class","vector");
+svg.appendChild(vector);
+
+/* Arc */
+const arc=document.createElementNS(svg.namespaceURI,"path");
+arc.setAttribute("class","angle-arc");
+svg.appendChild(arc);
+
+/* Point */
+const point=document.createElementNS(svg.namespaceURI,"circle");
+point.setAttribute("r",8);
+point.setAttribute("class","point");
+svg.appendChild(point);
+
+/* Vector label */
+const vectorLabel=document.createElementNS(svg.namespaceURI,"text");
+vectorLabel.setAttribute("class","vector-label");
+vectorLabel.textContent="r₀(P)";
+svg.appendChild(vectorLabel);
+
+let r=120;
+let phi=45;
+
+/* Update function */
+function update(){
+    const rad=phi*Math.PI/180;
+
+    const x=centerX+r*Math.cos(rad);
+    const y=centerY+r*Math.sin(rad);
+
+    point.setAttribute("cx",x);
+    point.setAttribute("cy",y);
+
+    vector.setAttribute("x1",centerX);
+    vector.setAttribute("y1",centerY);
+    vector.setAttribute("x2",x);
+    vector.setAttribute("y2",y);
+
+    /* Sector */
+    const arcR=70;
+    const endX=centerX+arcR*Math.cos(rad);
+    const endY=centerY+arcR*Math.sin(rad);
+    const large=Math.abs(phi)>180?1:0;
+    const sweep=phi>=0?1:0;
+
+    sector.setAttribute("d",
+        `M ${centerX} ${centerY}
+         L ${centerX+arcR} ${centerY}
+         A ${arcR} ${arcR} 0 ${large} ${sweep} ${endX} ${endY}
+         Z`);
+
+    arc.setAttribute("d",
+        `M ${centerX+arcR} ${centerY}
+         A ${arcR} ${arcR} 0 ${large} ${sweep} ${endX} ${endY}`);
+
+    vectorLabel.setAttribute("x",centerX+(r/2)*Math.cos(rad));
+    vectorLabel.setAttribute("y",centerY+(r/2)*Math.sin(rad));
+
+    const cartX=r*Math.cos(rad);
+    const cartY=r*Math.sin(rad);
+
+    document.getElementById("xVal").textContent=cartX.toFixed(2);
+    document.getElementById("yVal").textContent=(-cartY).toFixed(2);
+    document.getElementById("rVal").textContent=r.toFixed(2);
+    document.getElementById("phiVal").textContent=phi.toFixed(2);
+
+    computeSteps(cartX,cartY);
+}
+
+/* Piecewise φ */
+function computeSteps(x,y){
+    r=Math.sqrt(x*x+y*y);
+    const ratio=x/r;
+    const acos=Math.acos(Math.min(1,Math.max(-1,ratio)));
+    const phiDeg=(y>=0?acos:-acos)*180/Math.PI;
+
+    document.getElementById("steps").innerHTML=
+    "1. r = √(x² + y²) = "+r.toFixed(3)+"<br>"+
+    "2. x / r = "+ratio.toFixed(3)+"<br>"+
+    "3. arccos(x/r) = "+(acos*180/Math.PI).toFixed(3)+"°<br>"+
+    (y>=0?
+     "4. y ≥ 0 so φ is positive":
+     "4. y < 0 so φ is negative")+"<br>"+
+    "φ = "+phiDeg.toFixed(3)+"°";
+}
+
+/* Sliders */
+rSlider.oninput=e=>{r=parseFloat(e.target.value);update();}
+phiSlider.oninput=e=>{phi=parseFloat(e.target.value);update();}
+
+/* Drag */
+let dragging=false;
+point.onmousedown=()=>dragging=true;
+window.onmouseup=()=>dragging=false;
+window.onmousemove=e=>{
+    if(!dragging)return;
+    const rect=svg.getBoundingClientRect();
+    const x=e.clientX-rect.left-centerX;
+    const y=e.clientY-rect.top-centerY;
+    r=Math.sqrt(x*x+y*y);
+    phi=(y>=0?Math.acos(x/r):-Math.acos(x/r))*180/Math.PI;
+    update();
+};
+
+/* Buttons */
+toggleVector.onclick=()=>vectorLabel.classList.toggle("visible");
+resetBtn.onclick=()=>{r=100;phi=0;update();};
+
+update();
+</script>
+
+</body>
+</html>

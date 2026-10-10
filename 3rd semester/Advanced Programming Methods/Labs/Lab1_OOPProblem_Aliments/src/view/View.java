@@ -46,7 +46,9 @@ public class View
                 System.out.println(result[i].toString());
             }
 
-
+            //test exceeding capacity
+            controller.addProduct(new Salt(13.9, "salt3"));
+            //incearca sa printezi ceva aici
         }
         catch (RepoException e)
         {

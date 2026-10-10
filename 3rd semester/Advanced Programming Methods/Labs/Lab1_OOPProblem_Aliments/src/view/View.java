@@ -46,7 +46,7 @@ public class View
                 System.out.println(result[i].toString());
             }
 
-            
+
         }
         catch (RepoException e)
         {

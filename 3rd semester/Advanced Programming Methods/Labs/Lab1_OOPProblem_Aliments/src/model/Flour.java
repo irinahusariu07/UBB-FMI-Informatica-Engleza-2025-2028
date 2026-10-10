@@ -1,10 +1,12 @@
 package model;
 
+import exceptions.NegativeNumberException;
+
 public class Flour implements ProductInterface{
     private double pricePerKg;
     private String name;
-    public Flour(double ppk, String n)
-    {
+    public Flour(double ppk, String n) throws NegativeNumberException {
+        if(ppk < 0) throw new NegativeNumberException("Number is negative");
         this.pricePerKg = ppk;
         this.name = n;
     }

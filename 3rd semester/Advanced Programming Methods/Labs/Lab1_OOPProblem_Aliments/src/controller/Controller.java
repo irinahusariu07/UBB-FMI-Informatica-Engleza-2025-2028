@@ -1,4 +1,5 @@
 package controller;
+import exceptions.NegativeNumberException;
 import model.ProductInterface;
 import repo.RepoInterface;
 import exceptions.RepoException;
@@ -11,7 +12,7 @@ public class Controller {
         this.repo = r;
     }
 
-    public void addProduct(ProductInterface product) throws RepoException
+    public void addProduct(ProductInterface product) throws RepoException, NegativeNumberException
     {
         repo.addProduct(product);
     }
@@ -27,14 +28,14 @@ public class Controller {
         int cnt = 0; //imi trb contor ca sa declar array de filtered cu size
         for (int i = 0; i<all.length; i++)
         {
-            if(all[i].getPrice() >= 20.0) cnt++;
+            if(all[i].getPrice() > 20.0) cnt++;
         }
 
         ProductInterface[] filtered = new ProductInterface[cnt];
         int idx = 0; //idx for filtered array
         for (int i = 0; i<all.length; i++)
         {
-            if(all[i].getPrice() >= 20.0)
+            if(all[i].getPrice() > 20.0)
             {
                 filtered[idx] = all[i]; //copiez prod care indeplineste cond in vectorul rezultat
                 idx++;

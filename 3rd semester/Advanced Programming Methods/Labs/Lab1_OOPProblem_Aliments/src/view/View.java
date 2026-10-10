@@ -1,5 +1,6 @@
 package view;
 import controller.Controller;
+import exceptions.NegativeNumberException;
 import exceptions.RepoException;
 import model.Flour;
 import model.Salt;
@@ -47,12 +48,23 @@ public class View
             }
 
             //test exceeding capacity
+            /*
             controller.addProduct(new Salt(13.9, "salt3"));
-            //incearca sa printezi ceva aici
+            System.out.println("Se printeaza?"); //nu se printeaza cand da de execptie
+            */
+
+            //test remove
+            /*
+            System.out.println("Number of products before remove: " + all.length);
+            controller.removeProduct("salt3");
+            ProductInterface[] updated_list = controller.getAll();
+            System.out.println("Number of products after remove: " + updated_list.length);
+            */
         }
-        catch (RepoException e)
+        catch (RepoException | NegativeNumberException e) //fie repo exception fie negative number exception
         {
             System.out.println("Exception: " + e.getMessage());
         }
+        //ca sa fac programul sa ruleze dupa o exceptie aruncata - wrap each block individual in try catch
     }
 }

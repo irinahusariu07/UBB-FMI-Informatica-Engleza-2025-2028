@@ -1,0 +1,9 @@
+pizza|italian|50|flour,water,salt
+taco|mexican|20|meat,salt,chilli
+pasta|italian|30|flour,egg
+sarmale|romanian|110|meat,cabbage
+mici|romanian|20|meat
+buritto|mexican|25|meat,chilli
+lasagna|italian|120|pasta,meat,cheese
+abc|italian|100|pasta
+cozonac|romanian|200|flour,sugar,water

@@ -1,0 +1,5 @@
+14;18;arrival;london;0
+16;9;arrival;berlin;10
+9;12;departure;bucharest;0
+18;21;departure;berlin;5
+12;14;arrival;bucharest;0

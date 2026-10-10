@@ -1,0 +1,6 @@
+*.ipch
+.vs/
+cmake-build-*/
+x64/
+Debug/
+Release/

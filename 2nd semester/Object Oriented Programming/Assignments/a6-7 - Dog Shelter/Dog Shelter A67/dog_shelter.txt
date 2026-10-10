@@ -1,0 +1,12 @@
+newfoundland|willow|1|9|https://consumer-cms.petfinder.com/sites/default/files/images/content/Newfoundland%204.jpg
+boxer|bjorn|3|0|https://consumer-cms.petfinder.com/sites/default/files/images/content/Boxer%204.jpg
+shepherd|nord|2|2|https://consumer-cms.petfinder.com/sites/default/files/images/content/German%20Shepherd%20%202.jpg
+whippet|donald|2|0|https://consumer-cms.petfinder.com/sites/default/files/images/content/whippet%203.jpg
+irish setter|ronald|2|0|https://consumer-cms.petfinder.com/sites/default/files/images/content/Irish%20Setter%203.jpg
+basset hound|hank|4|0|https://www.zooplus.ro/ghid/wp-content/uploads/2025/01/basset-hound-im-grass.webp
+shepherd|zeus|0|5|https://images.squarespace-cdn.com/content/v1/63deb27b4a085e065cb68f2a/22c509d7-20ad-4463-bb59-bcc7d3f21a0d/10-week-old-german-shepherd-puppy-red-and-black.jpg
+cocker|charlie|1|0|https://consumer-cms.petfinder.com/sites/default/files/images/content/English%20Cocker%20Spaniel%203.jpg
+giant schnauzer|pepper|0|7|https://www.dogster.com/wp-content/uploads/2024/02/Giant-Schnauzer-dog-standing-on-grass_Eliska-Zeiskova_Shutterstock.jpeg
+border collie|oreo|2|1|https://consumer-cms.petfinder.com/sites/default/files/images/content/Border%20Collie%203.jpg
+australian shepherd|archie|1|6|https://www.animalbehaviorcollege.com/wp-content/uploads/2015/06/australian-shepherd.jpg
+test|test|2|2|test

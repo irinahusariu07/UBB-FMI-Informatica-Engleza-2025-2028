@@ -1,0 +1,3 @@
+Bob|Teodor Mihali, Bucuresti, Panselutelor|3|3|5
+Ana|Ghibu, Londrei, Socului|0|0|2
+Dora|Victor Babes|1|1|2

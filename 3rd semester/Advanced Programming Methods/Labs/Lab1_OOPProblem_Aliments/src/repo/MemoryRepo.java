@@ -8,6 +8,7 @@ public class MemoryRepo implements RepoInterface
     private ProductInterface[] products;
     private int size;
     private int fixed_capacity;
+    // constructor
     public MemoryRepo(int cap)
     {
         this.fixed_capacity = cap;
@@ -22,7 +23,6 @@ public class MemoryRepo implements RepoInterface
             products[size] = item;
             size++;
         }
-
         else throw new RepoException("Repo capacity exceeded!");
     }
 

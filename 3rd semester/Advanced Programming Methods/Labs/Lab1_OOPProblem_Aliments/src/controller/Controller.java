@@ -24,6 +24,9 @@ public class Controller {
 
     public ProductInterface[] getProductsPriceGreaterThan20()
     {
+        //puteam alege ADT lista ca sa nu mai parcurg de 2 ori cu for loop, pt ca nu a cerut explicit
+        //container de tip ProductInterface[]
+
         ProductInterface[] all = repo.getAll();
         int cnt = 0; //imi trb contor ca sa declar array de filtered cu size
         for (int i = 0; i<all.length; i++)

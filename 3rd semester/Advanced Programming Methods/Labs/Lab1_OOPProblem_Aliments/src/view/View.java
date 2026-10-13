@@ -11,6 +11,7 @@ import model.ProductInterface;
 public class View
 {
     private Controller controller;
+
     public View(Controller ctrl)
     {
         this.controller = ctrl;
@@ -54,12 +55,13 @@ public class View
             */
 
             //test remove
-            /*
+
             System.out.println("Number of products before remove: " + all.length);
-            controller.removeProduct("salt3");
+            controller.removeProduct("salt2");
             ProductInterface[] updated_list = controller.getAll();
             System.out.println("Number of products after remove: " + updated_list.length);
-            */
+
+
         }
         catch (RepoException | NegativeNumberException e) //fie repo exception fie negative number exception
         {
